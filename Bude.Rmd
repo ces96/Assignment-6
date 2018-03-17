@@ -1,0 +1,153 @@
+---
+title: "Bude"
+author: "Carlos Echeverri"
+date: "3/17/2018"
+output: pdf_document
+---
+
+```{r message=FALSE}
+library(tidyverse)
+library(ggmap)
+```
+
+# Empty maps
+
+## Road map
+
+```{r message=FALSE, warning=FALSE}
+map_road <- get_googlemap(center = c(-4.543678, 50.826636), zoom = 14)
+ggmap(map_road)
+```
+
+## Watercolor map
+
+```{r message=FALSE, warning=FALSE}
+map_wtr <- get_map("Bude", maptype = "watercolor",zoom= 14)
+ggmap(map_wtr)
+```
+
+# Marked maps
+
+## Road map
+
+```{r message=FALSE}
+ggmap(map_road) +
+  geom_point(
+    aes(x = -4.55134929999997 , y = 50.8305399),
+    color = "red", size = 3) +
+  geom_point(
+    aes(x = -4.553962 , y = 50.83587),
+    color = "blue", size = 3) +
+  geom_point(
+    aes(x = -4.550984200000016 , y = 50.8361969),
+    color = "orange", size = 3)+
+  geom_point(
+    aes(x = -4.552814, y = 50.83347),
+    color = "yellow", size = 3)
+```
+
+## Watercolor map
+
+```{r message=FALSE}
+ggmap(map_wtr) +
+  geom_point(
+    aes(x = -4.55134929999997 , y = 50.8305399),
+    color = "red", size = 3) +
+  geom_point(
+    aes(x = -4.553962 , y = 50.83587),
+    color = "blue", size = 3) +
+  geom_point(
+    aes(x = -4.550984200000016 , y = 50.8361969),
+    color = "orange", size = 3)+
+  geom_point(
+    aes(x = -4.552814, y = 50.83347),
+    color = "yellow", size = 3)
+```
+
+# Maps with routes
+
+```{r message=FALSE}
+from <- "Bude North Cornwall Cricket Club"
+to <- "Crooklets Inn"
+route_df <- route(from, to, structure = "route")
+```
+
+## Road map
+
+```{r message=FALSE}
+map_road <- get_map("Bude North Cornwall Cricket Club", maptype = "roadmap",zoom= 16)
+
+ggmap(map_road) +
+  geom_point(
+    aes(x = -4.550984200000016 , y = 50.8361969),
+    color = "orange", size = 3)+
+  geom_point(
+    aes(x = -4.552814, y = 50.83347),
+    color = "yellow", size = 3) +
+  geom_path(
+    aes(x = lon, y = lat), colour = "red", size = 1.5,
+    data = route_df, lineend = "round"
+  )
+```
+
+## Watercolor map
+
+```{r message=FALSE}
+map_road <- get_map("Bude North Cornwall Cricket Club", maptype = "watercolor",zoom= 16)
+
+ggmap(map_wtr) +
+  geom_point(
+    aes(x = -4.550984200000016 , y = 50.8361969),
+    color = "orange", size = 3)+
+  geom_point(
+    aes(x = -4.552814, y = 50.83347),
+    color = "yellow", size = 3) +
+  geom_path(
+    aes(x = lon, y = lat), colour = "red", size = 1.5,
+    data = route_df, lineend = "round"
+  )
+```
+
+# More information about the marked spots
+
+## Summerleaze beach
+
+Summerleaze has a unique appeal, not least because it is less than five minutes’ walk from the centre of Bude and the large car park leads directly to the sand dunes. The river, with its bobbing fishing boats, flanks the wide, sandy beach that is sheltered by the impressive breakwater, making the beach particularly popular with families and surfers. Beach Huts are bookable daily or weekly from £10 - £20 per day.
+
+Surfing Info: Good when everywhere else is maxed out. Right handers at mid tide also lefts at low tide.Suitable for: Beginners through to experienced surfers. Dangers: North of beach rocky, also sea pool hidden at high tide, with rocks in the pool. Strong rip (river) and also crowded in the busy season. Lots of bouncing, cross waves.
+
+```{r echo=FALSE}
+knitr::include_graphics("https://www.visitcornwall.com/sites/default/files/styles/product_image_breakpoints_theme_visitcornwall2_mobile_1x/public/Summerleaze%20Beach.jpg")
+```
+
+## Crooklets beach
+
+A wide expanse of golden sand is exposed at low tide, bordered by rocky outcrops ideal for rock-pooling. Crooklets is at the north side of Bude and can be reached by a short walk over the Summerleaze Down or down the hill from the town centre.
+
+Crooklets is very popular with surfers and is home to the Bude Surf Life Saving Club.  The beach has great facilities including a large car park, level access and viewing area, a play area, skate park, beach cafe, showers, amusements and pubs close by.
+
+```{r echo=FALSE}
+knitr::include_graphics("https://www.visitcornwall.com/sites/default/files/styles/product_image_breakpoints_theme_visitcornwall2_mobile_1x/public/product_image/Crooklets%20Beach%2C%20Bude%20Credit%20Matt%20Jessop%20and%20Visit%20Cornwall.jpg")
+```
+
+## Crooklets Inn
+
+This family-run pub just across the car park from the main surfing beach offers views across the golf course towards town (about 1500m/15 min walk). There are two small bars with a large, bright conservatory at the side and tables on the grass at the front. Food is served 12:00-15:00 and 18:00-21:00 weekdays, although may be available all day Sat and Sun; Sunday offers only lunches in winter, evening meals in summer. There may occasionally be a handpumped local guest ale such as Proper Job.. Families and dogs welcome. Five rooms are available for accommodation.
+
+```{r echo=FALSE}
+knitr::include_graphics("https://whatpub.com/img/COR/36/crooklets-inn-bude/298/224/52531.jpg")
+```
+
+## North Cornwall Cricket Club
+
+Bude North Cornwall Cricket Club is situated on the clifftops overlooking the Atlantic Ocean, and is quite simply one of the most stunning locations you could ever wish to visit, let alone play cricket at! 
+Bude North Cornwall Cricket Club was founded in 1870. Over the years it has played host to Hockey matches, Tennis, Cricket and even used for Mortar practice in WW2!
+
+Bude played only friendly matches until the late 1970's, entertaining local and touring sides throughout the summer months. Since joining the Cornwall Cricket League the club has held various league honours and still continues to host touring teams from around the world. 
+Currently the club has three senior sides. The 1st XI play in Cornwall Division 2 and the 2nd XI in Division 4. In addition we have a Sunday league side in the North Devon League Division 4. 
+
+```{r echo=FALSE}
+knitr::include_graphics("https://static.guim.co.uk/sys-images/Sport/Pix/columnists/2013/1/29/1359468918726/Wormsley-cricket-ground-S-001.jpg")
+```
+
+
