@@ -35,7 +35,7 @@ ggmap(map_road) +
     aes(x = -4.548689 , y = 50.831393),
     color = "green", size = 3) +
   geom_point(
-    aes(x = -4.543713 , y = 50.827849),
+    aes(x = -4.547858 , y = 50.826973),
     color = "brown", size = 3)
 
 ## Watercolor map
@@ -59,7 +59,7 @@ ggmap(map_road) +
     aes(x = -4.548689 , y = 50.831393),
     color = "green", size = 3) +
   geom_point(
-    aes(x = -4.543713 , y = 50.827849),
+    aes(x = -4.547858 , y = 50.826973),
     color = "brown", size = 3)
 
 # Maps with routes
