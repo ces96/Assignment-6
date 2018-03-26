@@ -27,10 +27,19 @@ ggmap(map_road) +
     color = "orange", size = 3)+
   geom_point(
     aes(x = -4.552814, y = 50.83347),
-    color = "yellow", size = 3)
+    color = "yellow", size = 3)+
+  geom_point(
+    aes(x = -4.542988, y = 50.836090),
+    color = "purple", size = 3)+
+  geom_point(
+    aes(x = -4.548689 , y = 50.831393),
+    color = "green", size = 3) +
+  geom_point(
+    aes(x = -4.543713 , y = 50.827849),
+    color = "brown", size = 3)
 
 ## Watercolor map
-ggmap(map_wtr) +
+ggmap(map_road) +
   geom_point(
     aes(x = -4.55134929999997 , y = 50.8305399),
     color = "red", size = 3) +
@@ -42,7 +51,16 @@ ggmap(map_wtr) +
     color = "orange", size = 3)+
   geom_point(
     aes(x = -4.552814, y = 50.83347),
-    color = "yellow", size = 3)
+    color = "yellow", size = 3)+
+  geom_point(
+    aes(x = -4.542988, y = 50.836090),
+    color = "purple", size = 3)+
+  geom_point(
+    aes(x = -4.548689 , y = 50.831393),
+    color = "green", size = 3) +
+  geom_point(
+    aes(x = -4.543713 , y = 50.827849),
+    color = "brown", size = 3)
 
 # Maps with routes
 
