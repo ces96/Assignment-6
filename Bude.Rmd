@@ -150,4 +150,21 @@ Currently the club has three senior sides. The 1st XI play in Cornwall Division 
 knitr::include_graphics("https://static.guim.co.uk/sys-images/Sport/Pix/columnists/2013/1/29/1359468918726/Wormsley-cricket-ground-S-001.jpg")
 ```
 
+## The Bude Haven Guest House
+
+Bude Haven Guest House is an 8 minute walk from the Bude, North Beach and 10 minutes away from the city center. They have their own restaurant and serve many local dishes. They also have a hot tub and a spa. 
+
+```{r echo=FALSE}
+knitr::include_graphics("http://bstatic.com/images/hotel/840x460/886/88624308.jpg")
+```
+
+## The Edgcumbe
+
+The Edgcumbe is a beach style B&B. They like to help the local community so they serve breakfast made from local ingredients. They also have a bar called 'The Snug' and an outside restaurant called 'The Deck'. 
+
+```{r echo=FALSE}
+knitr::include_graphics("http://bstatic.com/images/hotel/max1500_watermarked_standard_bluecom/d30/d3024f7ac5239bc0f66590ab136db8eca89ef2fb.jpg")
+```
+
+
 
