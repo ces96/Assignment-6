@@ -1,7 +1,6 @@
 ---
 title: "Bude"
 author: "Carlos Echeverri"
-date: "3/17/2018"
 output: pdf_document
 ---
 
@@ -43,7 +42,16 @@ ggmap(map_road) +
     color = "orange", size = 3)+
   geom_point(
     aes(x = -4.552814, y = 50.83347),
-    color = "yellow", size = 3)
+    color = "yellow", size = 3)+
+  geom_point(
+    aes(x = -4.542988, y = 50.836090),
+    color = "purple", size = 3)+
+  geom_point(
+    aes(x = -4.548689 , y = 50.831393),
+    color = "green", size = 3) +
+  geom_point(
+    aes(x = -4.547858 , y = 50.826973),
+    color = "brown", size = 3)
 ```
 
 ## Watercolor map
@@ -61,7 +69,16 @@ ggmap(map_wtr) +
     color = "orange", size = 3)+
   geom_point(
     aes(x = -4.552814, y = 50.83347),
-    color = "yellow", size = 3)
+    color = "yellow", size = 3)+
+  geom_point(
+    aes(x = -4.542988, y = 50.836090),
+    color = "purple", size = 3)+
+  geom_point(
+    aes(x = -4.548689 , y = 50.831393),
+    color = "green", size = 3) +
+  geom_point(
+    aes(x = -4.547858 , y = 50.826973),
+    color = "brown", size = 3)
 ```
 
 # Maps with routes

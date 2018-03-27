@@ -39,7 +39,7 @@ ggmap(map_road) +
     color = "brown", size = 3)
 
 ## Watercolor map
-ggmap(map_road) +
+ggmap(map_wtr) +
   geom_point(
     aes(x = -4.55134929999997 , y = 50.8305399),
     color = "red", size = 3) +
